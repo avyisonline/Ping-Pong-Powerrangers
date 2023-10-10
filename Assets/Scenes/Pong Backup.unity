@@ -133,12 +133,11 @@ GameObject:
   m_Component:
   - component: {fileID: 846018452}
   - component: {fileID: 846018451}
-  - component: {fileID: 846018453}
   - component: {fileID: 846018454}
   - component: {fileID: 846018456}
   - component: {fileID: 846018455}
   m_Layer: 0
-  m_Name: Ball
+  m_Name: ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -211,22 +210,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &846018453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846018449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57f7b9b99860fba49b90af678e10df29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xPosition: -2
-  yPosition: -2
-  xSpeed: 1
-  ySpeed: 1
 --- !u!114 &846018454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,10 +222,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16fa9a657d0f84b4f86c436f382240b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xPosition: -2
-  yPosition: -2
-  xSpeed: 1
-  ySpeed: 1
+  xPosition: 0
+  yPosition: 0
+  xSpeed: 2.5
+  ySpeed: 2.5
 --- !u!50 &846018455
 Rigidbody2D:
   serializedVersion: 4
@@ -327,7 +310,7 @@ GameObject:
   - component: {fileID: 1037247562}
   - component: {fileID: 1037247564}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: topBarrier
   m_TagString: horizontalWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -394,7 +377,7 @@ Transform:
   m_GameObject: {fileID: 1037247559}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalPosition: {x: 0, y: 5.075, z: 0}
   m_LocalScale: {x: 18, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -551,7 +534,7 @@ GameObject:
   - component: {fileID: 1625739396}
   m_Layer: 0
   m_Name: rightPaddle
-  m_TagString: Untagged
+  m_TagString: verticalWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -667,7 +650,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -697,7 +680,7 @@ GameObject:
   - component: {fileID: 1964906017}
   m_Layer: 0
   m_Name: leftPaddle
-  m_TagString: Untagged
+  m_TagString: verticalWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -813,7 +796,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -841,7 +824,7 @@ GameObject:
   - component: {fileID: 2020296502}
   - component: {fileID: 2020296504}
   m_Layer: 0
-  m_Name: Square (2)
+  m_Name: bottomBarrier
   m_TagString: horizontalWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -908,7 +891,7 @@ Transform:
   m_GameObject: {fileID: 2020296499}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5, z: 0}
+  m_LocalPosition: {x: 0, y: -5.075, z: 0}
   m_LocalScale: {x: 18, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

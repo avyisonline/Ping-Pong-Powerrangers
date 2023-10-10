@@ -6,6 +6,11 @@ TagManager:
   tags:
   - horizontalWall
   - verticalWall
+  - wallTriggerLeft
+  - wallTriggerRight
+  - ball
+  - scoreLeft
+  - scoreRight
   layers:
   - Default
   - TransparentFX
