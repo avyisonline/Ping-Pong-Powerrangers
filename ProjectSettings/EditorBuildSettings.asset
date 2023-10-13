@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TwoPlayerPong.unity
     guid: bd7060e265611bd4096c2a45bc64006d
+  - enabled: 1
+    path: Assets/Scenes/PongWithPortals.unity
+    guid: 652a84eef46ec954486cacaca05869ae
   m_configObjects: {}

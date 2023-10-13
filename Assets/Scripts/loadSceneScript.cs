@@ -4,14 +4,19 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class loadSceneScript : MonoBehaviour
+public class loadScene : MonoBehaviour
 {
-    void loadOnePlayerGame()
+    public void loadOnePlayer()
     {
         SceneManager.LoadScene("Pong");
     }
-    void loadTwoPlayerGame()
-    {
+    public void loadTwoPlayer()
+    { 
         SceneManager.LoadScene("TwoPlayerPong");
+    }
+
+    public void loadPortals()
+    {
+        SceneManager.LoadScene("PongWithPortals");
     }
 }
