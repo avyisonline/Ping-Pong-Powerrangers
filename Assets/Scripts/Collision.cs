@@ -11,8 +11,8 @@ public class Collision : MonoBehaviour
     public float xSpeed = 4f;
     public float ySpeed = 4f;
 
-    public int player1Score;
-    public int player2Score;
+    public int player1Score = 0;
+    public int player2Score = 0;
     public TMP_Text scorePlayer1;
     public TMP_Text scorePlayer2;
 
@@ -37,25 +37,49 @@ public class Collision : MonoBehaviour
         {
             ySpeed = ySpeed * -1f;
         }
-        else if (collision.gameObject.CompareTag("verticalWall"))
+        else if (collision.gameObject.CompareTag("Player"))
         {
-            xSpeed = xSpeed * -1f;
+            xSpeed = xSpeed * -1.1f;
         }
 
         if (collision.gameObject.CompareTag("wallTriggerRight"))
         {
             xPosition = 0f;
-            yPosition = 0f;
+            yPosition = Random.Range(-4f, 4f);
+            ySpeed = -4f;
+            xSpeed = -4f;
             player1Score++;
+            scorePlayer1.text = player1Score.ToString();
             Debug.Log("Player 1: " + player1Score + " points!");
         }
 
         if (collision.gameObject.CompareTag("wallTriggerLeft"))
         {
             xPosition = 0f;
-            yPosition = 0f;
+            yPosition = Random.Range(-4f, 4f);
+            ySpeed = 4f;
+            xSpeed = 4f;
             player2Score++;
+            scorePlayer2.text = player2Score.ToString();
             Debug.Log("Player 2: " + player2Score + " points!");
+        }
+
+        if(player1Score >= 10)
+        {
+            scorePlayer1.text = "Player 1 Wins!";
+            yPosition = 0f;
+            xPosition = 0f;
+            ySpeed = 0;
+            xSpeed = 0;
+        }
+
+        else if (player2Score >= 10)
+        {
+            scorePlayer2.text = "Player 2 Wins";
+            yPosition = 0f;
+            xPosition = 0f;
+            ySpeed = 0;
+            xSpeed = 0;
         }
     }
 }

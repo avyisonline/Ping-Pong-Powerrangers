@@ -5,12 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - horizontalWall
-  - verticalWall
   - wallTriggerLeft
   - wallTriggerRight
   - ball
   - scoreLeft
   - scoreRight
+  - bot
   layers:
   - Default
   - TransparentFX

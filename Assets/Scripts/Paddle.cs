@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class Paddle : MonoBehaviour
 {
-    public float speed = 5f;
+    public float speed = 7.5f;
     public string leftOrRight;
     public float maxValue = 3.8f;
     void paddleContorl(KeyCode up, KeyCode down)
@@ -32,5 +32,6 @@ public class Paddle : MonoBehaviour
             paddleContorl(KeyCode.UpArrow, KeyCode.DownArrow);
 
         }
+
     }
 }
