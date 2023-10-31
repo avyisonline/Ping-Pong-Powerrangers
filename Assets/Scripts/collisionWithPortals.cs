@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class collisionWithPortals : MonoBehaviour
@@ -46,17 +47,19 @@ public class collisionWithPortals : MonoBehaviour
         {
             xPosition = -8.5f;
             yPosition = 0f;
-            ySpeed = 4f;
-            xSpeed = 4f;
+            ySpeed = +ySpeed;        
         }
 
         if (collision.gameObject.CompareTag("wallTriggerLeft"))
         {
             xPosition = 8.5f;
             yPosition = 0f;
-            ySpeed = -4f;
-            xSpeed = -4f;
+            ySpeed = -ySpeed;
         }
 
+        if (playerScore == 30)
+        {
+            SceneManager.LoadScene("Menu");
+        }
     }
 }
