@@ -19,7 +19,7 @@ public class BotPaddle : MonoBehaviour
     //void Update()
     //{
     //    yPosition = yPosition + ySpeed * Time.deltaTime;
-       
+
     //}
 
     private void OnTriggerEnter2D(Collider2D collision)
