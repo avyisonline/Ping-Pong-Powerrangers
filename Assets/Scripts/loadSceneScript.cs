@@ -19,4 +19,9 @@ public class loadScene : MonoBehaviour
     {
         SceneManager.LoadScene("PongWithPortals");
     }
+
+    public void loadMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
