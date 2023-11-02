@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+/// <summary>
+/// This little thingy here makes it so that in all modes, YOU are in control of your paddle. And in Two Player it does the same for the the second player As well.
+/// It makes the thing to the correct speed, it makes it not go out of bounds, it makes it so W and S are the controls for P1 and ArrowUp and ArrowDown are the stuff for P2.
+/// And it makes me very happy with all of it :]
+/// </summary>
+
 public class Paddle : MonoBehaviour
 {
     public float speed = 7.5f; //<--- Important Strings

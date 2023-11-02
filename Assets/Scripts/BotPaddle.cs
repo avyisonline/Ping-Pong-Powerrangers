@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+/// <summary>
+/// Basically just the paddlescript;
+/// but a robot.
+/// OOOOOOOooooOOOoooOOoooOOOOOoooO
+/// (It follows the ball. It is currently *perfect* ***ALL OF THE TIME***)
+/// </summary>
+
 public class BotPaddle : MonoBehaviour
 {
     public float yPosition = 0f;

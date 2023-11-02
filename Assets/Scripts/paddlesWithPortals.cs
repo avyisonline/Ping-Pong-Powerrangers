@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+/// <summary>
+/// Just Paddles but for the Portal gamemode. Not much different from the normal one. 
+/// Some stuff is also removed, like the second player! Because who needs friends anyway! ;w;
+/// </summary>
 public class paddlesWithPortals : MonoBehaviour
 {
     public float speed = 7.5f;

@@ -4,6 +4,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// This script is basically the back bone of this whole thing! It makes score work, it makes the ball go bouncy, it does all sorts of cool shit
+/// It even has a little TMPro thingy in it, so it edits the scoreboard in real time. No need for looking at the console to check if you're #winning or not.
+/// Go me, I am so great for making this.
+/// </summary>
 public class Collision : MonoBehaviour
 {
     public float xPosition = 0f;

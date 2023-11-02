@@ -5,6 +5,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// Just the  collision script. But for the Portal mode.
+/// It has some added shit to make it be more fun with the portals and also work and stuff.
+/// But it's basically the same with some stuff even removed because it was unnecessary.
+/// </summary>
 public class collisionWithPortals : MonoBehaviour
 {
     public float xPosition = 0f;
