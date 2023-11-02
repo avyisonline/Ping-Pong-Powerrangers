@@ -8,20 +8,20 @@ public class loadScene : MonoBehaviour
 {
     public void loadOnePlayer()
     {
-        SceneManager.LoadScene("Pong");
+        SceneManager.LoadScene("Pong"); //Singeplayer
     }
     public void loadTwoPlayer()
     { 
-        SceneManager.LoadScene("TwoPlayerPong");
+        SceneManager.LoadScene("TwoPlayerPong"); //Multiplayer
     }
 
     public void loadPortals()
     {
-        SceneManager.LoadScene("PongWithPortals");
+        SceneManager.LoadScene("PongWithPortals"); //Portals (Singleplayer)
     }
 
     public void loadMenu()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Menu"); //Main Menu
     }
 }

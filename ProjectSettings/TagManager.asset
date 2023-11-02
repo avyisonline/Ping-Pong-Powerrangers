@@ -11,6 +11,8 @@ TagManager:
   - scoreLeft
   - scoreRight
   - bot
+  - verticalWall
+  - specialWall
   layers:
   - Default
   - TransparentFX

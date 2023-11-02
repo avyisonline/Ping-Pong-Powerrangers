@@ -8,6 +8,8 @@ public class paddlesWithPortals : MonoBehaviour
     public float speed = 7.5f;
     public string leftOrRight;
     public float maxValue = 1.2f;
+
+    //Paddle Control
     void paddleControl(KeyCode up, KeyCode down)
     {
         if (Input.GetKey(up) && transform.position.y < maxValue)
@@ -20,6 +22,7 @@ public class paddlesWithPortals : MonoBehaviour
         }
     }
 
+    //Differenciate the two players :)
     void Update()
     {
         if (leftOrRight == "left")

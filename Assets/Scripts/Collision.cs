@@ -25,8 +25,8 @@ public class Collision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        xPosition = xPosition + xSpeed * Time.deltaTime;
-        yPosition = yPosition + ySpeed * Time.deltaTime;
+        xPosition = xPosition + xSpeed * Time.deltaTime; //Time = Fate
+        yPosition = yPosition + ySpeed * Time.deltaTime; //Time = $$$
         transform.position = new Vector3(xPosition, yPosition, 0f);
     }
 
@@ -35,17 +35,21 @@ public class Collision : MonoBehaviour
 
         if (collision.gameObject.CompareTag("horizontalWall"))
         {
-            ySpeed = ySpeed * -1f;
+            ySpeed = ySpeed * -1.01f; //Bounce Off of Wall
+        }
+        else if (collision.gameObject.CompareTag("specialWall"))
+        {
+            xSpeed = xSpeed * -1.01f; //Bounce Off of Wall
         }
         else if (collision.gameObject.CompareTag("Player"))
         {
-            xSpeed = xSpeed * -1.1f;
+            xSpeed = xSpeed * -1.1f; //Bounce Off of Player + Add more *speed*
         }
 
-        if (collision.gameObject.CompareTag("wallTriggerRight"))
+        if (collision.gameObject.CompareTag("wallTriggerRight")) //Right Wall Shenanigans
         {
-            xPosition = 0f;
-            yPosition = Random.Range(-4f, 4f);
+            xPosition = Random.Range(1f, -1f); //Random Placement, 'cause otherwise it's just boring??
+            yPosition = Random.Range(-4f, 4f); //Random Placement, 'cause otherwise it's just boring??
             ySpeed = -4f;
             xSpeed = -4f;
             player1Score++;
@@ -53,10 +57,10 @@ public class Collision : MonoBehaviour
             Debug.Log("Player 1: " + player1Score + " points!");
         }
 
-        if (collision.gameObject.CompareTag("wallTriggerLeft"))
+        if (collision.gameObject.CompareTag("wallTriggerLeft")) //Left Wall Shenanigans
         {
-            xPosition = 0f;
-            yPosition = Random.Range(-4f, 4f);
+            xPosition = Random.Range(1f, -1f); //Random Placement, 'cause otherwise it's just boring??
+            yPosition = Random.Range(-4f, 4f); //Random Placement, 'cause otherwise it's just boring??
             ySpeed = 4f;
             xSpeed = 4f;
             player2Score++;
@@ -64,22 +68,22 @@ public class Collision : MonoBehaviour
             Debug.Log("Player 2: " + player2Score + " points!");
         }
 
-        if(player1Score >= 10)
+        if(player1Score >= 10) //Victory! Player One
         {
             scorePlayer1.text = "Player 1 Wins!";
-            yPosition = 0f;
-            xPosition = 0f;
-            ySpeed = 0;
-            xSpeed = 0;
+            yPosition = 128f; //Ball Be Gone
+            xPosition = 128f; //Ball Be Gone
+            ySpeed = 0; //Ball Be Stopped
+            xSpeed = 0; //Ball Be Stopped
         }
 
-        else if (player2Score >= 10)
+        else if (player2Score >= 10) //Victory! Player Two
         {
             scorePlayer2.text = "Player 2 Wins";
-            yPosition = 0f;
-            xPosition = 0f;
-            ySpeed = 0;
-            xSpeed = 0;
+            yPosition = 128f; //Ball Be Gone
+            xPosition = 128f; //Ball Be Gone
+            ySpeed = 0; //Ball Be Stopped
+            xSpeed = 0; //Ball Be Stopped
         }
     }
 }
