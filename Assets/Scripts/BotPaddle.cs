@@ -40,6 +40,6 @@ public class BotPaddle : MonoBehaviour
     //The thing that makes it be unbeatable, and always follow the ball 
     private void Update()
     {
-        transform.position = new Vector3(transform.position.x, ball.transform.position.y, 0f);
+        transform.position = new Vector3(transform.position.x, ball.transform.position.y, 0f); //the shit that makes to stick to the ball.
     }
 }
